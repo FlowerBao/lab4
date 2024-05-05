@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTH-8">
+    <title>Data validation</title>
+</head>
+<body>
+
+    <h2>JavaScript Validation</h2>
+    
+    <p>Please input a number between 1 and 10:</p>
+    
+    <input type="text" id="userInput" placeholder="Enter a number">
+    
+    <button type="button" onclick="checkInput()">Submit</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+    function checkInput() {
+      // Get the value of the input field with id="userInput"
+      let x = document.getElementById("userInput").value;
+
+      // If x is Not a Number or less than one or greater than 10
+      let text;
+      if (isNaN(x) && x < 10) {
+        text = "The number is lower than 10";
+
+      } else if ( x > 10){
+        text = "The number is higher than 10";
+      }
+      else {
+        text = "Please insert a number!";
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+    </script>
+    
+    </body>
+</html>
